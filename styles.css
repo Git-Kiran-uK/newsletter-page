@@ -10,7 +10,8 @@ html{
 
 :root{
     /* fonts */
-    --font-family: "Roboto", sans-serif;
+    --logo-font: "Cal Sans", sans-serif;
+    --font-family: "Montserrat", sans-serif;
     --hero-heading-size: 3rem;
     --hero-subtext-size: 1.125rem;
     --logo-text-size: 1.5rem;
@@ -27,6 +28,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    line-height: 1.4;
 }
 
 /* ==============
@@ -34,6 +36,8 @@ body{
 ================= */
 
 h1{
+    font-family: var(--logo-font);
+    letter-spacing: 4px;
     font-size: var(--logo-text-size);
     margin: 0;
 }
@@ -41,19 +45,28 @@ h1{
 h2{
     font-size: var(--hero-heading-size);
     font-weight: var(--heading-weight);
-    margin: 0;
+    margin-block: 0 .25em;
 }
 
 h3{
     font-size: var(--info-heading-size);
     font-weight: var(--heading-weight);
-    margin: 0;
+    margin-block: 0 .5em;
 }
 
+h4{
+    margin-block: .5em .25em;
+}
 
-blockquote{
-    font-size: var(--quote-text-size);
+p{
     margin: 0;
+    letter-spacing: .5px;
+}
+
+cite{
+    display: inline-block;
+    font-weight: 500;
+    margin-top: .5em;
 }
 
 /* ==========
@@ -89,6 +102,7 @@ nav a{
     color: #F5F5F5;
 }
 
+.quotes,
 .hero-section,
 .logo-section,
 .info-container,
@@ -105,7 +119,10 @@ main .background{
     align-items: center;
     background-color: #2B579A;
     color: #ECECEC;
-    padding: .75em;
+}
+
+.header-container{
+    padding: .5em 1em;
 }
 
 .logo-section{
@@ -124,9 +141,16 @@ nav a:focus{
 
 /* main */
 
+blockquote{
+    padding: 1em;
+    margin: 0;
+    background-color: #F5F5F5;
+    color: #000;
+}
+
 .hero-section{
     gap: 3em;
-    padding-bottom: 3em;
+    padding-block: 3em;
 }
 
 .hero-section .hero-img{
@@ -139,24 +163,57 @@ nav a:focus{
     margin-bottom: 2.5em;
 }
 
+.information-section{
+    padding-block: 3em;
+}
+
 .info-container{
     gap: 1em;
 }
 
+.box,
+blockquote{
+    box-shadow: 0px 0px 15px #00000044;
+    border-radius: 1em 1em .5em .5em;
+    flex: 1;
+}
+
+.box-content{
+    padding: 1em;
+}
+
 .box img{
+    border-radius: 1em 1em 0 0;
     width: 100%;
     height: 200px;
 }
 
-.call-to-action{
-    border-radius: 1em;
-    background-color: #2B579A;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2em;
-    color: #F5F5F5;
+div.testimonials{
+    padding-block: 3em;
 }
 
+.quotes{
+    gap: 1em;
+}
+
+.call-to-action{
+    padding: 2em;
+    margin-block: 3em;
+    color: #F5F5F5;
+    border-radius: 1em;
+    align-items: center;
+    background-color: #2B579A;
+    justify-content: space-between;
+}
+
+/* footer */
+
+footer{
+    text-align: center;
+    background-color: #2B579A;
+    color: #ECECEC;
+    padding-block: 1.5em;
+}
 
 /* button */
 .btn{
